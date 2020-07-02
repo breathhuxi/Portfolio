@@ -1,0 +1,57 @@
+//media query
+$mobile: "480px";
+$tablet: "768px";
+$laptop: "960px";
+$desktop: "1152px";
+$widescreen: "1440px";
+
+// color
+$lBlue: #BBFBFF;
+$blue: #94E4F5;
+$mBlue: #3fbcdb;
+$dBlue: #233567;
+$lPink: #fcd0d0;
+$pink: #FFBBBB;
+$mPink: #ff9b9b;
+$lGreen: #9beee0;
+$green: #8cebdb;
+$mGreen: #64cec8;
+$lRedOrange: #ffb1a3;
+$redOrange: #d57868;
+$dRedOrange: #C61D00;
+$white: #ffffff;
+$black: #000000;
+$lBlack: rgb(24, 24, 24);
+$transparent: rgba(0, 0, 0, 0);
+
+// Container
+.container {
+    width: 1345px;
+    min-width: 1345px;
+    margin: 0 auto;
+    @media (max-width: $widescreen) {
+      width: 1153px;
+      min-width: 1153px;
+    }
+    @media (max-width: $desktop) {
+      width: 961px;
+      min-width: 961px;
+    }
+    @media (max-width: $laptop) {
+      width: 767px;
+      min-width: 767px;
+    }
+    @media (max-width: $tablet) {
+      width: 481px;
+      min-width: 481px;
+    }
+    @media (max-width: $mobile) {
+      width: 320px;
+      min-width: 320px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+  }

@@ -1,0 +1,200 @@
+@import "./style.scss";
+
+.about {
+    background-color: $lBlack;
+    color: $white;
+    width: 100%;
+}
+
+//rain drop
+:root {
+    --drop-width: 1px;
+    --drop-height: 80px;
+    --fall-height: 900px;
+}
+
+.intro-wrapper {
+    min-height: 100vh;
+    height: auto;
+    // position: relative;
+    // top: 14vh;
+    .intro {
+        .row {
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .intro-invisible-block {
+            height: 14vh;
+        }
+        .intro-title-wrapper {
+            position: relative;
+            .intro-title {
+                h1 {
+                    position: absolute;
+                    top: -0.8rem;
+                    right: 13.8rem;
+                    transform: rotateZ(0deg);
+                    transition: transform 0.5s ease-out;
+                }
+                h2 {
+                    opacity: 1;
+                    transition: all 0.5s ease-out;
+                }
+            }
+        }
+        .intro-title-wrapper:hover {
+            cursor: pointer;
+            h1 {
+                transform: rotateZ(-24deg);
+            }
+            h2 {
+                opacity: 0.75;
+            }
+        }
+        .avatar-wrapper {
+            width: 20rem * 0.18 * 2;
+            height: 20rem * 0.18 * 2;
+            #avatar {
+                width: 20rem;
+                height: 20rem;
+                overflow: hidden;
+                img {
+                    width: 20rem;
+                    height: auto;
+                }
+            }
+            .avatar-clip {
+                clip-path: circle(18% at 56% 52%);
+                transform: translate(-56% + 18%, -52% + 18%);
+            }
+        }
+        .avatar-wrapper:hover {
+            cursor: pointer;
+            opacity: 0.86;
+        }
+        #avatarWrapper:hover ~ .dialog-bubble-wrapper > #bubbleHello {
+            opacity: 1;
+        }
+        .dialog-bubble-wrapper {
+            position: absolute;
+            left: 54vw;
+            .bubble-white {
+                background-image: linear-gradient(120deg, rgba(253, 253, 251, 0.4) 0%, rgba(235, 237, 238, 0.4) 100%);
+                margin: 2rem;
+                padding: 1rem;
+                border-radius: 2rem;
+            }
+            .bubble-hide {
+                opacity: 0;
+            }
+            #bubbleHello {
+                transition: opacity 0.5s ease-in-out;
+            }
+        }
+        .specialty-wrapper {
+            width: 44vw;
+            .specialty {
+                text-align: start;;
+                line-height: 2rem;
+            }
+        }
+        .cv-wrapper {
+            margin: 0 1rem;
+            a {
+                font-size: 1rem;
+                letter-spacing: 1px;
+                display: inline-block;
+                padding: 0.75rem 3.6rem;
+                color: $white;
+                text-decoration: none;
+                text-align: center;
+                border: 1px solid $white;
+                border-radius: 2rem;
+                transition: all 0.5s ease;
+            }
+            a:hover {
+                background-color: $white;
+                color: #13547a;
+            }
+        }
+
+    }
+}
+
+#selfIntroduction {
+    // rain css
+    .drop {
+        background: -webkit-gradient(
+          linear, 0% 0%, 0% 100%,
+          from(rgba(255, 255, 255, 0.1)),
+          to(rgba(255, 255, 255, 0.6))
+        );
+        background: -moz-linear-gradient(
+          top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.6) 100%
+        );
+        width: var(--drop-width);
+        height: var(--drop-height);
+        position: absolute;
+        bottom: 200px;
+        -webkit-animation: fall .30s linear infinite;
+        -moz-animation: fall .30s linear infinite;
+    }
+    @-webkit-keyframes fall {
+        to { margin-top: var(--fall-height); }
+    }
+    @-moz-keyframes fall {
+        to { margin-top: var(--fall-height); }
+    }
+}
+
+#nameIntroduction {
+    overflow: hidden; //fix white space of moved ripples
+    // ripple css
+    .ripple-wrapper {
+        z-index: -1;
+        position: relative;
+        top: -50vh;
+        margin-bottom: -50vh; //fix white space of moved ripples
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+      
+    .ripple-wrapper .ripple {
+        width: 0;
+        height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 18vh 22vw;
+    }
+      
+    .ripple-wrapper .ripple span {
+        position: absolute;
+        box-sizing: border-box;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        animation: animate 5s linear infinite;
+        animation-delay: calc(-0.5s * var(--i));
+    }
+    .ripple-wrapper .box:nth-child(2) span {
+        border: none;
+        background: rgba(255, 255, 0, 0.25);
+    }
+    @keyframes animate {
+        0% {
+          width: 0;
+          height: 0;
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 0.2;
+        }
+        100% {
+          width: 28rem;
+          height: 18rem;
+          opacity: 0;
+        }
+    }
+}

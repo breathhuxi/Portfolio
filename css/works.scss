@@ -1,0 +1,472 @@
+@import "./style.scss";
+
+body {
+    background-color: $lBlack;
+}
+
+.works {
+    background-color: $lBlack;
+    color: $white;
+    width: 100%;
+}
+
+.category-wrapper {
+    width: 100%;
+    height: 200vh;
+    @media (max-width: $tablet) {
+        margin-bottom: 8rem;
+    }
+    .category {
+        .row {
+            position: relative;
+            height: 200vh;
+            display: flex;
+            align-content: flex-start; // content: wrapper
+            // align-items: center; // items: items inside wrapper
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: $tablet) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .category-title-wrapper {
+                z-index: 1;
+                flex-shrink: 1;
+            }
+            .project-thumb-wrapper {
+                position: relative;
+                flex-shrink: 1;
+                display: inline-block; //allows to set a width and height on the element
+                .project-thumb {
+                    text-align: center;
+                    transform: translate(-50%, -50%);
+                    color: $white;
+                    position: absolute;
+                    img {
+                        max-width: 4rem;
+                        height: auto;
+                    }
+                }
+            }
+            .project-thumb-wrapper:hover {
+                background-color: rgba(0, 0, 0, .4);
+                cursor: pointer;
+                .project-thumb:hover {
+                    color: $white;
+                }       
+            }
+        }
+    }
+}
+
+.userResearch { //.category-wrapper
+    // position: relative; // already defined in .category-wrapper class
+    .category-title-wrapper {
+        position: relative;
+        right: -8vw;
+        @media (max-width: $tablet) {
+            right: -10rem;
+        }
+        .category-title {
+            color: $lBlue;
+            line-height: 4.6rem;
+            h1 {
+                position: absolute;
+                top: 0;
+                right: 11rem;
+            }
+            .category-title-top {
+                position: absolute;
+                top: 0;
+                right: -1rem;
+            }
+            .category-title-bottom {
+                position: absolute;
+                top: 4.6rem;
+                right: -1rem;
+                -webkit-text-stroke: 1px $lBlue;
+            }   
+        }
+    }
+    .helsinkiCityMuseum {
+        background: url('../assets/helsinkiCityMuseum/helsinki-city-museum.jpg') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .2);
+        background-blend-mode: overlay;
+        // flex: 0 1 20rem; //flex-grow, flex-shrink, width
+        padding: 24vh 16vw;
+        margin: 4rem 4rem;
+        top: 4rem;
+        @media (max-width: $tablet) {
+            padding: 8rem 10rem;
+            margin: 4rem 2rem;
+        }
+    }
+    .motionPaletteA {
+        background-color: $blue;
+        // flex: 0 1 16rem; //flex-grow, flex-shrink, width
+        padding: 34vh 10vw;
+        margin: 4rem 4rem;
+        top: 2rem;
+        @media (max-width: $tablet) {
+            padding: 10rem 6rem;
+            margin: 0rem 2rem;
+        }
+    }
+    #motionPaletteA {
+        .project-thumb {
+            color: $dBlue;
+        }
+    }
+    #motionPaletteA:hover {
+        background-color: $mBlue;
+        .project-thumb {
+            color: $white;
+        }
+    }
+    .remoteATC {
+        background: url('../assets/remoteATC/remote-atc.jpeg') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.05);
+        background-blend-mode: overlay;
+        padding: 32vh 24vw;
+        margin: 4rem;
+        left: 5rem;
+        @media (max-width: $laptop) {
+            padding: 20vh 20vw;
+            margin: 0rem 0rem;
+        }
+        @media (max-width: $tablet) {
+            padding: 10rem 12rem;
+            margin: 2rem 2rem;
+            left: 0;
+        }
+    }
+}
+
+.uxUi {
+    .category-title-wrapper {
+        position: relative;
+        left: 10vw;
+        top: -20vh;
+        @media (max-width: $tablet) {
+            left: 2rem;
+            top: 4rem;
+        }
+        .category-title {
+            color: $lPink;
+            line-height: 4.6rem;
+            h1 {
+                position: absolute;
+                top: 0rem;
+                left: 16rem;
+            }
+            .category-title-bottom {
+                position: absolute;
+                top: 4.6rem;
+                -webkit-text-stroke: 1px $lPink;
+            }
+        }
+    }
+    .crowfallTools {
+        background-color: $pink;
+        padding: 26vh 14vw;
+        margin: 4rem 4rem;
+        top: -4vh;
+        @media (max-width: $laptop) {
+            padding: 20vh 10vw;
+            top: 0rem;
+        }
+        @media (max-width: $tablet) {
+            padding: 8rem 10rem;
+            margin: 4rem 2rem;
+            top: 4rem;
+        }
+    }
+    #crowfallTools {
+        .project-thumb {
+            color: $dRedOrange;
+        }
+    }
+    #crowfallTools:hover {
+        background-color: $mPink;
+        .project-thumb {
+            color: $white;
+        }
+    }
+    .busRental {
+        background: url('../assets/busRental/bus-rental.jpeg') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .12);
+        background-blend-mode: overlay;
+        padding: 30vh 20vw;
+        margin: 4rem 4rem;
+        top: -56vh;
+        @media (max-width: $tablet) {
+            padding: 8rem 12rem;
+            margin: 2rem 4rem;
+            top: 0rem;
+        }
+    }
+    .goPlay {
+        background: url('../assets/goPlay/go-play.jpeg') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .28);
+        background-blend-mode: overlay;
+        padding: 48vh 14vw;
+        margin: 4rem 0rem;
+        left: 4vw;
+        top: -8vh;
+        @media (max-width: $laptop) {
+            padding: 30vh 10vw;
+            margin: 2rem 0rem;
+        }
+        @media (max-width: $tablet) {
+            padding: 12rem 6rem;
+            margin: 2rem 2rem;
+            left: 10rem;
+        }
+    }
+    .mccMobile {
+        background-color: $lRedOrange;
+        padding: 28vh 18vw;
+        margin: 4rem 4rem;
+        top: -80vh;
+        left: 10vw;
+        @media (max-width: $laptop) {
+            padding: 8rem 10rem;
+            margin: 2rem 4rem;
+            top: -60vh;
+            left: 4vw;
+        }
+        @media (max-width: $tablet) {
+            padding: 8rem 10rem;
+            margin: 2rem 2rem;
+            top: -10rem;
+            left: -2rem;
+        }
+    }
+    #mccMobile {
+        .project-thumb {
+            color: $dRedOrange;
+        }
+    }
+    #mccMobile:hover {
+        background-color: $redOrange;
+        .project-thumb {
+            color: $white;
+        }
+    }
+}
+
+.graphics2D3D {
+    .category-title-wrapper {
+        position: relative;
+        margin: 4rem 8rem;
+        right: 24vw;
+        top: -24vh;
+        @media (max-width: $tablet) {
+            margin: 2rem 2rem;
+            right: 2rem;
+            top: -8rem;
+        }
+        .category-title {
+            color: $lBlue;
+            line-height: 4.6rem;
+            h1 {
+                position: absolute;
+                top: 0;
+                right: -8rem;
+            }
+            .category-title-top {
+                position: absolute;
+                top: 0;
+                right: -2rem;
+            }
+            .category-title-bottom {
+                position: absolute;
+                top: 4.6rem;
+                -webkit-text-stroke: 1px $lBlue;
+            }
+        }
+    }
+    .motionGraphics {
+        background-color: $blue;
+        padding: 34vh 10vw;
+        margin: 4rem 4rem;
+        top: 10vh;
+        @media (max-width: $tablet) {
+            top: 14rem;
+            left: -8rem;
+            padding: 12rem 6rem;
+            margin: 4rem 0rem;
+        }
+    }
+    #motionGraphics {
+        .project-thumb {
+            color: $dBlue;
+        }
+    }
+    #motionGraphics:hover {
+        background-color: $mBlue;
+        .project-thumb {
+            color: $white;
+        }
+    }
+    .indieBrandVi {
+        background: url('../assets/indieBrandVi/indie-brand-vi.png') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .12);
+        background-blend-mode: overlay;
+        padding: 28vh 20vw;
+        margin: 4rem 4rem;
+        top: -50vh;
+        left: 26vw;
+        @media (max-width: $tablet) {
+            padding: 10rem 14rem;
+            margin: 2rem 4rem;
+            top: 4rem;
+            left: 16vw;
+        }
+    }
+    .productCampaign {
+        background: url('../assets/productCampaign/product-campaign.png') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .18);
+        background-blend-mode: overlay;
+        padding: 24vh 18vw;
+        margin: 4rem 4rem;
+        top: -70vh;
+        left: -4vw;
+        @media (max-width: $laptop) {
+            padding: 24vh 10vw;
+            margin: 0rem 0rem;
+            top: 0rem;
+        }
+        @media (max-width: $tablet) {
+            padding: 8rem 10rem;
+            margin: 2rem 0rem;
+            top: 4rem;
+            left: -10vw;
+        }
+    }
+    .modelingRendering {
+        background-color: $blue;
+        padding: 36vh 12vw;
+        margin: 4rem 2rem;
+        top: -76vh;
+        left: 2vw;
+        @media (max-width: $laptop) {
+            padding: 24vh 10vw;
+            margin: 0rem 0rem;
+            top: -60vh;
+            left: 10vw;
+        }
+        @media (max-width: $tablet) {
+            padding: 8rem 10rem;
+            margin: 4rem 2rem;
+            top: -4rem;
+            left: 16vw;
+        }
+    }
+    #modelingRendering {
+        .project-thumb {
+            color: $dBlue;
+        }
+    }
+    #modelingRendering:hover {
+        background-color: $mBlue;
+        .project-thumb {
+            color: $white;
+        }
+    }
+}
+
+.playfulInteraction {
+    .category-title-wrapper {
+        position: relative;
+        left: 10vw;
+        top: -20vh;
+        @media (max-width: $tablet) {
+            left: 2rem;
+            top: 24rem;
+            margin: 4rem 4rem;
+        }
+        .category-title {
+            color: $lRedOrange;
+            line-height: 4.6rem;
+            h1 {
+                position: absolute;
+                top: 0rem;
+                left: 20rem;
+            }
+            .category-title-bottom {
+                position: absolute;
+                top: 4.6rem;
+                -webkit-text-stroke: 1px $lRedOrange;
+            }
+        }
+    }
+    .shadowPuppet {
+        background: url('../assets/shadowPuppet/shadow-puppet.jpg') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .2);
+        background-blend-mode: overlay;
+        padding: 36vh 14vw;
+        margin: 4rem 4rem;
+        top: 4vh;
+        left: 2vw;
+        @media (max-width: $tablet) {
+            padding: 10rem 8rem;
+            margin: 2rem 2rem;
+            top: 48vh;
+            left: -18vw;
+        }
+    }
+    .culturalIdentity {
+        background: url('../assets/culturalIdentity/cultural-identity.jpeg') center no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .25);
+        background-blend-mode: overlay;
+        padding: 34vh 26vw;
+        margin: 4rem 4rem;
+        top: -42vh;
+        left: -4vw;
+        @media (max-width: $tablet) {
+            padding: 10rem 8rem;
+            margin: 2rem 2rem;
+            top: 24vh;
+            left: 24vw;
+        }
+    }
+    .motionPaletteB {
+        background-color: $lRedOrange;
+        padding: 32vh 24vw;
+        margin: 0rem 4rem;
+        top: -58vh;
+        left: 32vw;
+        @media (max-width: $laptop) {
+            padding: 12rem 14rem;
+            margin: 0rem 4rem;
+            top: -60vh;
+            left: 12vw;
+        }
+        @media (max-width: $tablet) {
+            padding: 8rem 10rem;
+            margin: 0rem 2rem;
+            top: 6rem;
+            left: 2rem;
+        }
+    }
+    #motionPaletteB {
+        .project-thumb {
+            color: $dRedOrange;
+        }
+    }
+    #motionPaletteB:hover {
+        background-color: $redOrange;
+        .project-thumb {
+            color: $white;
+        }
+    }
+}
