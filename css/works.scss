@@ -386,11 +386,11 @@ body {
     .category-title-wrapper {
         position: relative;
         left: 10vw;
-        top: -10vh;
+        top: -16vh;
         @media (max-width: $tablet) {
             left: 2rem;
-            top: 0;
-            margin: 4rem 4rem 0rem 0rem;
+            top: 4rem;
+            margin: 4rem 4rem;
         }
         .category-title {
             color: $lRedOrange;
