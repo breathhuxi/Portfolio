@@ -234,13 +234,13 @@ body {
         top: -80vh;
         left: 10vw;
         @media (max-width: $laptop) {
-            padding: 8rem 10rem;
+            padding: 10rem 12rem;
             margin: 2rem 4rem;
             top: -60vh;
             left: 4vw;
         }
         @media (max-width: $tablet) {
-            padding: 8rem 10rem;
+            padding: 10rem 12rem;
             margin: 2rem 2rem;
             top: -10rem;
             left: -2rem;
@@ -299,7 +299,7 @@ body {
             top: 14rem;
             left: -8rem;
             padding: 12rem 6rem;
-            margin: 2rem 0rem;
+            margin: 0rem 0rem;
         }
     }
     #motionGraphics {
@@ -386,11 +386,11 @@ body {
     .category-title-wrapper {
         position: relative;
         left: 10vw;
-        top: -20vh;
+        top: -10vh;
         @media (max-width: $tablet) {
             left: 2rem;
-            top: 24rem;
-            margin: 4rem 4rem;
+            top: 0;
+            margin: 4rem 4rem 0rem 0rem;
         }
         .category-title {
             color: $lRedOrange;
@@ -419,7 +419,6 @@ body {
         @media (max-width: $tablet) {
             padding: 10rem 8rem;
             margin: 2rem 2rem;
-            top: 48vh;
             left: -18vw;
         }
     }
@@ -433,9 +432,9 @@ body {
         top: -42vh;
         left: -4vw;
         @media (max-width: $tablet) {
-            padding: 10rem 8rem;
+            padding: 14rem 12rem;
             margin: 2rem 2rem;
-            top: 24vh;
+            top: 0vh;
             left: 24vw;
         }
     }
@@ -452,9 +451,9 @@ body {
             left: 12vw;
         }
         @media (max-width: $tablet) {
-            padding: 8rem 10rem;
+            padding: 10rem 12rem;
             margin: 0rem 2rem;
-            top: 6rem;
+            top: 0rem;
             left: 2rem;
         }
     }
