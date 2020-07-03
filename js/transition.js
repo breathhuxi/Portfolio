@@ -49,7 +49,8 @@ class Fade extends Highway.Transition {
                 
                 done();
             }})
-            .fromTo(to.children[0], 0.5, {opacity: 0}, {opacity: 1});
+            .fromTo(to.children[0], 0.5, {opacity: 0}, {opacity: 1})
+            .fromTo(to.lastElementChild, 0.5, {opacity: 0}, {opacity: 1});
 
     }
     out ({from, done}) {
