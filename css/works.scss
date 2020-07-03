@@ -266,9 +266,9 @@ body {
         right: 24vw;
         top: -24vh;
         @media (max-width: $tablet) {
-            margin: 2rem 2rem;
+            margin: 4rem 2rem;
             right: 2rem;
-            top: -8rem;
+            top: -6rem;
         }
         .category-title {
             color: $lBlue;
@@ -296,7 +296,7 @@ body {
         margin: 4rem 4rem;
         top: 10vh;
         @media (max-width: $tablet) {
-            top: 10rem;
+            top: 16rem;
             left: -8rem;
             padding: 12rem 6rem;
             margin: 0rem 0rem;
@@ -389,8 +389,8 @@ body {
         top: -16vh;
         @media (max-width: $tablet) {
             left: 2rem;
-            top: 6rem;
-            margin: 4rem 4rem;
+            top: 20vh;
+            margin: 10rem 4rem;
         }
         .category-title {
             color: $lRedOrange;
