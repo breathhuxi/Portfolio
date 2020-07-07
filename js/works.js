@@ -14,11 +14,11 @@ export function initMagicScroll() {
         });
     
         var title = category.querySelector('.category-title');
-        parallaxTl.from(title, {duration: 1.5, autoAlpha: 0, y: '+10vh'}, 0);
+        parallaxTl.from(title, {duration: 1.5, autoAlpha: 0, y: '10%'}, 0);
     
         var projects = category.querySelectorAll('.project-thumb-wrapper');
         projects.forEach(function(project, index){
-            parallaxTl.from(project, {duration: 2.5, y: '+20vh'}, 0.3 * index);
+            parallaxTl.from(project, {duration: 2.5, y: '20%'}, 0.3 * index);
         });
 
         const scene = new ScrollMagic.Scene({
