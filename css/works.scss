@@ -46,11 +46,29 @@ body {
                         max-width: 4rem;
                         height: auto;
                     }
+                    h4 {
+                        display: none;
+                    }
+                    p {
+                        display: none;
+                    }
+                    h5 {
+                        display: none;
+                    }
                 }
             }
             .project-thumb-wrapper:hover {
                 background-color: rgba(0, 0, 0, .4);
                 cursor: pointer;
+                h4 {
+                    display: block;
+                }
+                p {
+                    display: block;
+                }
+                h5 {
+                    display: block;
+                }
                 .project-thumb:hover {
                     color: $white;
                 }       
@@ -64,6 +82,9 @@ body {
     .category-title-wrapper {
         position: relative;
         right: -8vw;
+        @media (max-width: $laptop) {
+            
+        }
         @media (max-width: $tablet) {
             right: -10rem;
         }
@@ -105,11 +126,12 @@ body {
     .motionPaletteA {
         background-color: $blue;
         // flex: 0 1 16rem; //flex-grow, flex-shrink, width
-        padding: 34vh 10vw;
+        padding: 34vh 12vw;
         margin: 4rem 4rem;
         top: 2rem;
+        left: 2rem;
         @media (max-width: $tablet) {
-            padding: 10rem 6rem;
+            padding: 10rem 8rem;
             margin: 0rem 2rem;
         }
     }
@@ -133,7 +155,7 @@ body {
         margin: 4rem;
         left: 5rem;
         @media (max-width: $laptop) {
-            padding: 20vh 20vw;
+            padding: 20vh 16vw;
             margin: 0rem 0rem;
         }
         @media (max-width: $tablet) {
