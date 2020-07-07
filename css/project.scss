@@ -323,6 +323,15 @@
     }
 }
 
+#go-play {
+    .step-wrapper-0 {
+        background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    }
+    .step-wrapper-1 {
+        background-color: $white;
+    }
+}
+
 #mcc-mobile {
     .step-wrapper-0 {
         // background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
