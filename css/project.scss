@@ -45,7 +45,7 @@
                     }
                     img {
                         max-width: 50vw;
-                        max-height: 80vh;
+                        max-height: 85vh;
                     }
                 }
             }
@@ -406,6 +406,38 @@
     }
     .step-wrapper-5 {
         background-color: $white;
+    }
+}
+
+#motion-graphics {
+    .step-wrapper-0 {
+        video {
+            width: 100vw;
+            height: auto;
+        }
+    }
+    .step-wrapper-1 {
+        background-color: $white;
+    }
+    .step-wrapper-2 {
+        video {
+            width: 100vw;
+            height: auto;
+        }
+    }
+}
+
+#modeling-rendering {
+    .step-wrapper-0 {
+        background: url('../assets/modelingRendering/donut.png') center no-repeat;
+        background-size: 100vw auto;
+    }
+    .step-wrapper-1 {
+        background-color: $white;
+    }
+    .step-wrapper-2 {
+        background: url('../assets/modelingRendering/vase.png') center no-repeat;
+        background-size: 100vw auto;
     }
 }
 
